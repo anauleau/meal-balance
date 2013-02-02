@@ -1,18 +1,21 @@
-.outerSpace {
-  width: 800px;
-  margin: 0 auto;  
-  background-color: white;  
+body {
+  background-color: white;
 }
 
-.titleZone {
-  width: 600px;
+.container {
+  width: 800px;
   margin: 0 auto;
 }
 
-.searchArena {
-  width: 600px;
-  height: auto;
-  margin-left: 100px;
-  margin-right: 100px;
-  padding-top: 15px;
+.inner {
+  width: 800px;
+  padding: 0 100px;
+}
+
+
+/*
+ * Helper classes
+ */
+.center {
+  text-align: center;
 }

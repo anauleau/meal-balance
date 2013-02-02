@@ -1,51 +1,50 @@
 <!-- TODO: Break this out into a separate template? -->
 <template name="index">
-	<form class="form-horizontal">
-		<fieldset>
-			<div id="legend" class="">
-				<legend class="">Cook!</legend>
-			</div>
-			<div class="control-group">
-				<label class="control-label">What do you feel like making?</label>
-				<div class="controls">
-					<input placeholder="" class="input-xlarge search-query" type="text" id="search">
-					<p class="help-block">search by dish, cuisine or ingredient</p>
+	<div class='inner'>
+		<form class="form-horizontal">
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label">What do you feel like making?</label>
+					<div class="controls">
+						<input placeholder="" class="input-xlarge search-query" type="text" id="search">
+						<p class="help-block">search by dish, cuisine or ingredient</p>
+					</div>
 				</div>
-			</div>
 
-			<div class="control-group">
-				<label class="control-label">Choose a Cuisine</label>
-				<div class="controls">
-					<select class="input-xlarge" id="cuisine">
-					<option>American</option>
-					<option>French</option>
-					<option>Korean</option>
-					</select>
+				<div class="control-group">
+					<label class="control-label">Choose a Cuisine</label>
+					<div class="controls">
+						<select class="input-xlarge" id="cuisine">
+						<option>American</option>
+						<option>French</option>
+						<option>Korean</option>
+						</select>
+					</div>
 				</div>
-			</div>
 
-			<div class="control-group">
-				<label class="control-label">Any dietary restrictions?</label>
-				<div class="controls">
-					<label class="radio" id="diet">
-						<input value="Option one" name="group" checked="checked" type="radio">
-						Vegan
-					</label>
-					<label class="radio" id="diet">
-						<input value="Option two" name="group2" type="radio">
-						Vegetarian
-					</label>
+				<div class="control-group">
+					<label class="control-label">Any dietary restrictions?</label>
+					<div class="controls">
+						<label class="radio" id="diet">
+							<input value="Option one" name="group" checked="checked" type="radio">
+							Vegan
+						</label>
+						<label class="radio" id="diet">
+							<input value="Option two" name="group2" type="radio">
+							Vegetarian
+						</label>
+					</div>
 				</div>
-			</div>
 
-			<div class="control-group">
-				<!-- TODO: This label is empty and is being trimmed from html -->
-				<label class="control-label"></label>
-				<div class="controls">
-					<button class="btn btn-success" id="submit">Submit</button>
+				<div class="control-group">
+					<!-- TODO: This label is empty and is being trimmed from html -->
+					<label class="control-label"></label>
+					<div class="controls">
+						<button class="btn btn-success" id="submit">Submit</button>
+					</div>
 				</div>
-			</div>
 
-		</fieldset>
-	</form>
+			</fieldset>
+		</form>
+	</div>
 </template>
