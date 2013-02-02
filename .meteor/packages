@@ -8,3 +8,6 @@ insecure
 preserve-inputs
 bootstrap
 router
+accounts-base
+accounts-ui
+accounts-facebook
