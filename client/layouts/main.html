@@ -5,4 +5,53 @@
 <body>
   {{loginButtons}}
   {{renderPage}}
+  {{> basicForm}}
 </body>
+
+<template name="basicForm">
+<form class="form-horizontal">
+    <fieldset>
+      <div id="legend" class="">
+        <legend class="">Cook!</legend>
+      </div>
+    <div class="control-group">
+
+          <!-- Select Basic -->
+          <label class="control-label">Choose a Cuisine</label>
+          <div class="controls">
+            <select class="input-xlarge">
+      <option>American</option>
+      <option>French</option>
+      <option>Korean</option>
+      </select>
+          </div>
+
+        </div><div class="control-group">
+          <label class="control-label">Any dietary restrictions?</label>
+          <div class="controls">
+
+            <!-- Multiple Radios -->
+            <label class="radio">
+              <input value="Option one" name="group" checked="checked" type="radio">
+              Vegan
+            </label>
+            <label class="radio">
+              <input value="Option two" name="group" type="radio">
+              Vegetarian
+            </label>
+          </div>
+
+        </div><div class="control-group">
+
+          <!-- Search input-->
+          <label class="control-label">Search input</label>
+          <div class="controls">
+            <input placeholder="placeholder" class="input-xlarge search-query" type="text">
+            <p class="help-block">enter ingredients here</p>
+          </div>
+
+        </div>
+
+    </fieldset>
+  </form>
+</template>
