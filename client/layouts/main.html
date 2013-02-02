@@ -3,6 +3,22 @@
 </head>
 
 <body>
-	{{loginButtons}}
-	{{renderPage}}
+	<div class="outerSpace">
+		{{loginButtons}}
+		{{renderPage}}
+		{{> title}}
+		{{> search}}
+	</div>
 </body>
+
+<template name="title">
+	<div class="titleZone">
+		<h1>MEALZ</h1>
+	</div>
+</template>
+
+<template name="search">
+	<div class="searchArena">
+		{{> basicForm}}
+	</div>
+</template>
