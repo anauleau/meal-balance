@@ -6,6 +6,7 @@
 autopublish
 insecure
 preserve-inputs
+jquery
 bootstrap
 router
 accounts-base
