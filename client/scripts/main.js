@@ -24,6 +24,6 @@ if (Meteor.isClient) {
 	});
 
   Template.basicForm.cuisine = function(){
-    return ["American", "American: Cajun and Creole", "Italian", ]
+    return ["American", "American: Cajun and Creole", "Chinese", "Italian"]
   }
 }
