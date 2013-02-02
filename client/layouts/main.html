@@ -9,3 +9,56 @@
 		{{renderPage}}
 	</div>
 </body>
+
+<template name="basicForm">
+<form class="form-horizontal">
+	<fieldset>
+	  <div id="legend" class="">
+	    <legend class="">Cook!</legend>
+	  </div>
+	  <div class="control-group">
+      <label class="control-label">What do you feel like making?</label>
+      <div class="controls">
+        <input placeholder="" class="input-xlarge search-query" type="text" id="keyWord">
+        <p class="help-block">search by dish, cuisine or ingredient</p>
+      </div>
+    </div>
+
+		<div class="control-group">
+			<label class="control-label">Choose a Cuisine</label>
+	      <div class="controls">
+	        <select class="input-xlarge" id="cuisine">
+				  <option>American</option>
+				  <option>French</option>
+				  <option>Korean</option>
+				  </select>
+				</div>
+		</div>
+
+		<div class="control-group">
+	    <label class="control-label">Any dietary restrictions?</label>
+	    <div class="controls">
+				<label class="radio" id="diet">
+	        <input name="vegan" checked="checked" type="radio">
+	          Vegan
+	        </label>
+	      <label class="radio" id="diet">
+	        <input name="vegetarian" type="radio">
+	          Vegetarian
+	        </label>
+	      </div>
+	    </div>
+
+
+    <div class="control-group">
+      <label class="control-label"></label>
+			<div class="controls">
+        <button class="btn btn-success" id="submit">Submit</button>
+        </div>
+      </div>
+
+<template name="search">
+	<div class="searchArena">
+		{{> basicForm}}
+	</div>
+</template>
