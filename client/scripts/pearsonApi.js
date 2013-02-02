@@ -18,4 +18,4 @@ var getCuisineArray = function(data, dietArray){
     }
   });
   return returnInfo;
-}
+};
