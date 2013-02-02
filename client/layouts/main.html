@@ -1,26 +1,11 @@
 <head>
-  <title>meal_balance</title>
+	<title>meal_balance</title>
 </head>
 
 <body>
-  <div class="outerSpace">
-    {{loginButtons}}
-    {{renderPage}}
-    {{> title}}
-    {{> search}}
-  </div>
+	<div class="container">
+		{{loginButtons}}
+		<h1 class='center'>MEALZ</h1>
+		{{renderPage}}
+	</div>
 </body>
-
-<template name="title">
-  <div class="titleZone">
-    <h1>MEALZ</h1>
-  </div>
-</template>
-
-<template name="search">
-  <div class="searchArena">
-    {{> basicForm}}
-  </div>
-</template>
-
-
