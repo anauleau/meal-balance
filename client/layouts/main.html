@@ -1,11 +1,14 @@
 <head>
-  <title>meal_balance</title>
+	<title>meal_balance</title>
 </head>
 
 <body>
-  {{loginButtons}}
-  {{renderPage}}
-  {{> basicForm}}
+	<div class="outerSpace">
+		{{loginButtons}}
+		{{renderPage}}
+		{{> title}}
+		{{> search}}
+	</div>
 </body>
 
 <template name="basicForm">
@@ -55,7 +58,8 @@
         </div>
       </div>
 
-
-    </fieldset>
-  </form>
+<template name="search">
+	<div class="searchArena">
+		{{> basicForm}}
+	</div>
 </template>
