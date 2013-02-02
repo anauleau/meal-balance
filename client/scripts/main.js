@@ -1,16 +1,20 @@
+var searchTerms;
 if (Meteor.isClient) {
-
 	Template.basicForm.events({
-	'click #submit' : function(){
+	'click #submit' : function(e){
+		e.preventDefault();
+		searchTerms = {
+			"keyWord": undefined,
+			"cuisine": undefined,
+			"diet": {}
+		};
 
-		var searchFields = ["search", "cuisine", "diet"]
-
-		var searchTerms = {};
-	       //refactor and use reduce instead of for loop
-	  for (var i = 0; i < fields.length; i++){
-	  	searchTerms[fields[i]] = $("#" + fields[i]).val();
-	  }
-
+		for (key in searchTerms){
+			if($("#" + key).val()){
+				searchTerms[key] = $("#"+key).val();
+			}
+		}
+		getDataByCuisine(searchTerms.cuisine);
 	}
 
 	});
