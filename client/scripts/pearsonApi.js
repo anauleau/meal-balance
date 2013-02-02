@@ -10,3 +10,9 @@ var getDataByCuisine = function(cuisine){
     }
   });
 }
+
+var filterByDite = function(resultArray, dietArray){
+  return (
+    _.each(resultArray, function(v){})
+  )
+}
