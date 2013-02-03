@@ -1,11 +1,11 @@
-var getDataByCuisine = function(cuisine){
-  var cuisineAPI = "https://api.pearson.com/kitchen-manager/v1/cuisines/"+cuisine+".json?apikey=2e02a8b595c1cd7e9a53cc39d1b8ce21";
+var getDataByCuisine = function(filter){
+  var cuisineAPI = "https://api.pearson.com/kitchen-manager/v1/recipes.json?ingredients-any=butter&cuisine=american&apikey=3e8c8773334c91e0614872759ec4f303"
   $.ajax({
     type: "GET",
     dataType: "jsonp",
     url: cuisineAPI,
     success: function(data){
-      getCuisineArray(data.recipes, ["eggs", "milk", "apple"]);
+      getCuisineArray(data.results, ["eggs", "milk", "apple"]);
     }
   });
 }
@@ -17,5 +17,12 @@ var getCuisineArray = function(data, dietArray){
       returnInfo.push(eachMenu);
     }
   });
-  return returnInfo;
+  console.log(returnInfo);
 };
+
+// Template.recipe.name = functi({
+//   .name
+// }
+
+//directions come as an array of strings
+

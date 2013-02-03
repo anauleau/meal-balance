@@ -1,0 +1,62 @@
+<template name="basicForm">
+<form class="form-horizontal">
+	<fieldset>
+		<div class="control-group">
+			<label class="control-label">What's cooking?</label>
+			<div class="controls">
+				<input placeholder="enter an ingredient" class="input-xlarge search-query" type="text" id="search">
+			</div>
+		</div>
+
+		<!-- <div class="control-group">
+			<label class="control-label">Any dietary restrictions?</label>
+			<div class="controls">
+				<label class="radio" id="diet">
+					<input value="Option one" name="group" checked="checked" type="radio">
+					Vegan
+				</label>
+				<label class="radio" id="diet">
+					<input value="Option two" name="group2" type="radio">
+					Vegetarian
+				</label>
+			</div>
+		</div> -->
+
+		  <div class="control-group">
+          <label class="control-label">Any dietary restrictions?</label>
+
+          <!-- Multiple Checkboxes -->
+          <div class="controls">
+      <!-- Inline Checkboxes -->
+      <label class="checkbox inline">
+        <input value="Vegan" type="checkbox">
+        Vegan
+      </label>
+      <label class="checkbox inline">
+        <input value="Vegetarian" type="checkbox">
+        Vegetarian
+      </label>
+      <label class="checkbox inline">
+        <input value="Celiac" type="checkbox">
+        Celiac
+      </label>
+  
+      <label class="checkbox inline">
+        <input value="Pescadarien" type="checkbox">
+        Pescadarien
+      </label>
+  </div>
+
+        </div>
+
+
+		<div class="control-group">
+			<label class="control-label"></label>
+			<div class="controls">
+				<button class="btn btn-success" id="submit">Submit</button>
+			</div>
+		</div>
+
+		</fieldset>
+	</form>
+</template>

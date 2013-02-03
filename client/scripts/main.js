@@ -20,22 +20,9 @@ if (Meteor.isClient) {
           searchTerms[key] = $("#"+key).val();
         }
       }
-      getDataByCuisine(searchTerms.cuisine);
+      getDataByCuisine(searchTerms);
     }
   });
-
-  Template.basicForm.cuisine = function(){
-    return ["African",
-            "American",
-            "American: Cajun and Creole",
-            "American: California",
-            "American: Hawaii",
-            "American: Mid-Atlantic",
-            "American: Midwest",
-            "American: Mountain States",
-            "American: New England",
-            "American: Pacific Northwest"];
-  };
 
   Template.accountSettings.events({
     'click #save' : function(e, template) {
