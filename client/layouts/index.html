@@ -5,24 +5,36 @@
 			{{> basicForm}}
 		</div>
 	</div>
+	{{> loadingModal}}
 </template>
 
 <!-- <template name="showableRecipe">
-  {{#if showRecipe}}
-    {{> recipe}}
-  {{/if}}
+	{{#if showRecipe}}
+		{{> recipe}}
+	{{/if}}
 </template> -->
 
 <template name="recipe">
 	<div class="recipe">
 		<div class="instructions">
-			Recipe for: {{name}} <br>
+			Recipe for: {{name}} <br />
 			Ingredients: {{#each ingredients}}
-				{{.}} <br>
-			{{/ each}} <br> 
+				{{.}} <br />
+			{{/ each}} <br />
 			Directions: {{#each directions}}
-				{{.}}<br>
+				{{.}}<br />
 			{{/ each}}
 		</div>
 	</div>
+</template>
+
+<template name="loadingModal">
+	<div id="loadingModal" class="modal hide fade">
+	<div class="modal-header">
+		<h3>Searching...</h3>
+	</div>
+	<div class="modal-body">
+		<p>Searching for recipes. Please wait...</p>
+	</div>
+</div>
 </template>
