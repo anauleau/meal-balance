@@ -13,9 +13,9 @@ var getDataByCuisine = function(cuisine){
 var returnInfo = [];
 var getCuisineArray = function(data, dietArray){
   _.each(data, function(eachMenu){
-    if (_.intersection(eachMenu.ingredients, dietArray).length === 0){
+    if((_.intersection(eachMenu.ingredients, dietArray).length === 0) && !(eachMenu.image).match(/defaultrecipe/)){
       returnInfo.push(eachMenu);
     }
   });
-  return returnInfo;
+  console.log(returnInfo);
 };
