@@ -1,0 +1,14 @@
+<template name='accountSettings'>
+	<div>Dietary preferences:
+		<form name="dietPrefences" multiple>
+			{{#each dietPrefs}}
+				<label>
+					<input type='checkbox' name="{{.}}"> {{.}}
+				</label>
+			{{/each}}
+			<br />
+			<br />
+			<input class='btn' id='save' type='submit' value='Save'>
+		</form>
+	</div>
+</template>
