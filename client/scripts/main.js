@@ -13,6 +13,10 @@ if (Meteor.isClient) {
         e.preventDefault();
         searchReq();
       }
+    },
+    'click #submit' : function(e, template) {
+      e.preventDefault();
+      searchReq();
     }
   });
 
