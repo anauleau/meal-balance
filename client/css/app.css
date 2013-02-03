@@ -74,9 +74,9 @@ html, body {
 }
 
 .recipe {
-  height: 200px;
+  height: 100%;
   width: 575px;
-  background-color: grey;
+  background-color: #ADB2B3;
   border-radius: 10px;
 }
 

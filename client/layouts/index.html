@@ -4,26 +4,25 @@
 		<div class='formFields'>
 			{{> basicForm}}
 		</div>
-		{{> recipe}}
 	</div>
 </template>
+
+<!-- <template name="showableRecipe">
+  {{#if showRecipe}}
+    {{> recipe}}
+  {{/if}}
+</template> -->
 
 <template name="recipe">
 	<div class="recipe">
 		<div class="instructions">
-			Title<br>
-			Ingredients<br>
-			Directions<br>
-	</div>
+			Recipe for: {{name}} <br>
+			Ingredients: {{#each ingredients}}
+				{{.}} <br>
+			{{/ each}} <br> 
+			Directions: {{#each directions}}
+				{{.}}<br>
+			{{/ each}}
+		</div>
 	</div>
 </template>
-
-<!-- <template name="recipe">
-	<div class="recipe">
-		Recipe for: {{name}}
-		Ingredients: {{ingredients}}
-		Directions: {{#each direction}}
-			{{.}}<br>
-		{{/each}}
-	</div>
-</template> -->

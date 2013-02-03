@@ -29,7 +29,5 @@ var getResultRecipes = function(resultArray, dietArray){
     }
   });
   console.log(resultRecipes);
+  Meteor.call('showResults');
 };
-
-
-
