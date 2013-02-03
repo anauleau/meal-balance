@@ -40,7 +40,7 @@ html, body {
 }
 
 .logo {
-  background-image: url("/goodeatsinline.png");
+  background-image: url("/img/goodeatsinline.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -58,7 +58,7 @@ html, body {
 }
 
 .woman {
-  background-image: url("/woman.png");
+  background-image: url("/img/woman.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
