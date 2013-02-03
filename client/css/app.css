@@ -1,9 +1,16 @@
-body {
-  background-color: white;
+.wrapper {
+  background-image: url("/retropattern.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+  height: 800px;
 }
 
 .container {
   width: 800px;
+  height: 800px;
+  background-color: #F2CC33;
   margin: 0 auto;
 }
 
