@@ -1,4 +1,5 @@
 var getDataByCuisine = function(filter){
+
   var cuisineAPI = "https://api.pearson.com/kitchen-manager/v1/recipes.json?ingredients-any="+filter.keyWord+"&apikey=3e8c8773334c91e0614872759ec4f303";
   $.ajax({
     type: "GET",
@@ -29,3 +30,6 @@ var getResultRecipes = function(resultArray, dietArray){
   });
   console.log(resultRecipes);
 };
+
+
+

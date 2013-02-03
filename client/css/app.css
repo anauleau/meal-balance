@@ -1,14 +1,16 @@
+
 html, body {
+  font-family: 'Galindo', cursive;
   background-color: white;
   height: 100%;
 }
-#wrap {
+/*#wrap {
   min-height: 100%;
-  /*background-image: url("/retropattern.png");*/
+  background-image: url("/greenretrobackground.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-}
+}*/
 
 #main {
   overflow:auto;
@@ -28,12 +30,59 @@ html, body {
 .container {
   width: 800px;
   height: 800px;
-  /*background-color: #F2CC33;*/
+  background-color: white;
+  border-radius: 10px;
   margin: 0 auto;
 }
 
 .inner {
   padding: 0 100px;
+}
+
+.logo {
+  background-image: url("/goodeatsinline.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 125px;
+  width: 740px;
+  margin-left: 25px;
+  margin-top: 30px;
+}
+
+.slogan {
+  font-family:'Lobster Two', cursive;
+  font-size: 2em;
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+.woman {
+  background-image: url("/woman.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 150px;
+  width: 200px;
+  margin-left: 25px;
+  margin-right: 50px;
+  float: right;
+}
+
+.formFields {
+  margin-top: 100px;
+}
+
+.recipe {
+  height: 200px;
+  width: 575px;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.instructions {
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 .search-label {
@@ -51,3 +100,6 @@ html, body {
 .center {
   text-align: center;
 }
+
+
+
