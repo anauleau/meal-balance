@@ -7,22 +7,21 @@ if (Meteor.isClient) {
   });
 
   Template.basicForm.events({
-    'click #submit' : function(e){
-      e.preventDefault();
-      searchTerms = {
-        "keyWord": undefined,
-        "cuisine": undefined,
-        "diet": {}
-      };
-
-      for (key in searchTerms){
-        if($("#" + key).val()){
-          searchTerms[key] = $("#"+key).val();
-        }
+    'keypress #search' : function(e, template) {
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if (keycode === 13) {
+        e.preventDefault();
+        searchReq();
       }
-      getDataByCuisine(searchTerms);
     }
   });
+
+  var searchReq = function(){
+    var query = {
+      keyWord: $('#search').val()
+    };
+    getDataByCuisine(query);
+  };
 
   Template.basicForm.cuisine = function(){
     return ["African",

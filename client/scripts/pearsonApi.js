@@ -1,4 +1,4 @@
- var getDataByCuisine = function(filter){
+var getDataByCuisine = function(filter){
   $.ajax({
     type: "GET",
     dataType: "jsonp",
@@ -11,7 +11,7 @@
       getResultRecipes(data.results, ingredientFilter);
     }
   });
-}
+};
 
 var resultRecipes = [];
 var getResultRecipes = function(resultArray, dietArray){
@@ -30,3 +30,6 @@ var getResultRecipes = function(resultArray, dietArray){
   });
   console.log(resultRecipes);
 };
+
+
+
