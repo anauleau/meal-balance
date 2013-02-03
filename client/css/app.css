@@ -1,10 +1,28 @@
-.wrapper {
+html, body {
+  background-color: white;
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
   background-image: url("/retropattern.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin: 0 auto;
-  height: 800px;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:50px; /* this needs to be bigger than footer height*/
+}
+
+#footer {
+  background-color: #FAFAFA;
+  position: relative;
+  margin-top: -50px; /* negative value of footer height */
+  height: 50px;
+  clear:both;
+  padding-top:15px;
+  border-top: 1px solid #D4D4D4;
 }
 
 .container {
@@ -17,7 +35,6 @@
 .inner {
   padding: 0 100px;
 }
-
 
 /*
  * Helper classes
