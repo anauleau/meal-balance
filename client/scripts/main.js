@@ -24,19 +24,6 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.basicForm.cuisine = function(){
-    return ["African",
-            "American",
-            "American: Cajun and Creole",
-            "American: California",
-            "American: Hawaii",
-            "American: Mid-Atlantic",
-            "American: Midwest",
-            "American: Mountain States",
-            "American: New England",
-            "American: Pacific Northwest"];
-  };
-
   Template.accountSettings.events({
     'click #save' : function(e, template) {
       e.preventDefault();

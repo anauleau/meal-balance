@@ -1,6 +1,29 @@
 <!-- TODO: Break this out into a separate template? -->
 <template name="index">
 	<div class='inner'>
-		{{> basicForm}}
+		<div class='formFields'>
+			{{> basicForm}}
+		</div>
+		{{> recipe}}
 	</div>
 </template>
+
+<template name="recipe">
+	<div class="recipe">
+		<div class="instructions">
+			Title<br>
+			Ingredients<br>
+			Directions<br>
+	</div>
+	</div>
+</template>
+
+<!-- <template name="recipe">
+	<div class="recipe">
+		Recipe for: {{name}}
+		Ingredients: {{ingredients}}
+		Directions: {{#each direction}}
+			{{.}}<br>
+		{{/each}}
+	</div>
+</template> -->
