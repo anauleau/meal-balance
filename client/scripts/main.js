@@ -2,6 +2,7 @@ var searchTerms;
 if (Meteor.isClient) {
 	Meteor.Router.add({
     '/': 'index',
+    '/settings' : 'accountSettings',
     '*': '404'
   });
 
@@ -24,6 +25,25 @@ if (Meteor.isClient) {
 	});
 
   Template.basicForm.cuisine = function(){
-    return ["American", "American: Cajun and Creole", "Chinese", "Italian"]
-  }
+    return ["American",
+            "American: Cajun and Creole",
+            "Italian"];
+  };
+
+  Template.accountSettings.events({
+    'click #save' : function(e, template) {
+      e.preventDefault();
+      // TODO: save the checked selections
+    }
+  });
+
+  Template.accountSettings.dietPrefs = function(){
+    return ['Vegan',
+            'Vegetarian',
+            'Celiac',
+            'Pescetarian',
+            'Kosher',
+            'Halaal',
+            'Lactose Intolerant'];
+  };
 }
