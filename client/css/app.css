@@ -4,7 +4,7 @@ html, body {
 }
 #wrap {
   min-height: 100%;
-  background-image: url("/retropattern.png");
+  /*background-image: url("/retropattern.png");*/
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -28,12 +28,21 @@ html, body {
 .container {
   width: 800px;
   height: 800px;
-  background-color: #F2CC33;
+  /*background-color: #F2CC33;*/
   margin: 0 auto;
 }
 
 .inner {
   padding: 0 100px;
+}
+
+.search-label {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#search {
+  margin: 20px;
 }
 
 /*
