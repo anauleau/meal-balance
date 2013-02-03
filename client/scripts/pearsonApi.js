@@ -5,8 +5,8 @@ var getDataByCuisine = function(filter){
     dataType: "jsonp",
     url: cuisineAPI,
     success: function(data){
-      var ingredientFilter = _.map(filter.restrictions, function(b , eachDiet){
-        return eachDiet ? restrictionHash[eachDiet] : [];
+      var ingredientFilter = _.map(filter.restrictions, function(b, eachDiet){
+        return b ? restrictionHash[eachDiet] : [];
       });
       ingredientFilter = _.uniq(_.flatten(ingredientFilter));
       getResultRecipes(data.results, ingredientFilter);
