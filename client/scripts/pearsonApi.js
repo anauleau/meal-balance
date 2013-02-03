@@ -1,21 +1,31 @@
-var getDataByCuisine = function(cuisine){
-  var cuisineAPI = "https://api.pearson.com/kitchen-manager/v1/cuisines/"+cuisine+".json?apikey=2e02a8b595c1cd7e9a53cc39d1b8ce21";
+var getDataByCuisine = function(filter){
+  var cuisineAPI = "https://api.pearson.com/kitchen-manager/v1/recipes.json?ingredients-any="+filter.keyWord+"&apikey=3e8c8773334c91e0614872759ec4f303";
   $.ajax({
     type: "GET",
     dataType: "jsonp",
     url: cuisineAPI,
     success: function(data){
-      getCuisineArray(data.recipes, ["eggs", "milk", "apple"]);
+      console.log(data);
+      filterArray = ["it", "should", "be", "user","'s","input"];
+      getResultRecipes(data.results, filterArray);
     }
   });
 }
 
-var returnInfo = [];
-var getCuisineArray = function(data, dietArray){
-  _.each(data, function(eachMenu){
-    if((_.intersection(eachMenu.ingredients, dietArray).length === 0) && !(eachMenu.image).match(/defaultrecipe/)){
-      returnInfo.push(eachMenu);
+var resultRecipes = [];
+var getResultRecipes = function(resultArray, dietArray){
+  _.each(resultArray, function(eachResult){
+    if(_.intersection(eachResult.ingredients, dietArray).length === 0){
+      resultRecipes.push(eachResult);
+      $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        url: eachResult.url,
+        success: function(data){
+          eachResult["directions"] = data.directions;
+        }
+      });
     }
   });
-  console.log(returnInfo);
+  console.log(resultRecipes);
 };
