@@ -4,14 +4,13 @@ html, body {
   background-color: white;
   height: 100%;
 }
-#wrap {
+/*#wrap {
   min-height: 100%;
-  /*background-color: #25BA43;*/
   background-image: url("/greenretrobackground.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-}
+}*/
 
 #main {
   overflow:auto;
@@ -31,7 +30,6 @@ html, body {
 .container {
   width: 800px;
   height: 800px;
- /* background-color: #F2CC33;*/
   background-color: white;
   border-radius: 10px;
   margin: 0 auto;
@@ -40,17 +38,6 @@ html, body {
 .inner {
   padding: 0 100px;
 }
-
-/*.logo {
-  background-image: url("/goodeats.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 400px;
-  width: 500px;
-  margin-left: 155px;
-  margin-top: 30px;
-}*/
 
 .logo {
   background-image: url("/goodeatsinline.png");
@@ -96,6 +83,15 @@ html, body {
 .instructions {
   padding-left: 20px;
   padding-top: 20px;
+}
+
+.search-label {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#search {
+  margin: 20px;
 }
 
 /*
