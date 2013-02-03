@@ -1,11 +1,13 @@
 var getDataByCuisine = function(filter){
+
+  var cuisineAPI = "https://api.pearson.com/kitchen-manager/v1/recipes.json?ingredients-any="+filter.keyWord+"&apikey=3e8c8773334c91e0614872759ec4f303";
   $.ajax({
     type: "GET",
     dataType: "jsonp",
-    url: "https://api.pearson.com/kitchen-manager/v1/recipes.json?limit=50&apikey=3e8c8773334c91e0614872759ec4f303",
+    url: cuisineAPI,
     success: function(data){
-      var ingredientFilter = _.map(filter.diet, function(eachDiet){
-        return eachDiet;
+      var ingredientFilter = _.map(filter.restrictions, function(eachDiet){
+        return eachDiet ? eachDiet : [];
       });
       ingredientFilter = _.uniq(_.flatten(ingredientFilter));
       getResultRecipes(data.results, ingredientFilter);
