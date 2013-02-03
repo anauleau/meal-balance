@@ -20,7 +20,7 @@ if (Meteor.isClient) {
           searchTerms[key] = $("#"+key).val();
         }
       }
-      getDataByCuisine(searchTerms.cuisine);
+      getDataByCuisine(searchTerms);
     }
   });
 
