@@ -11,16 +11,27 @@ if (Meteor.isClient) {
     'keypress #search' : function(e, template) {
       var keycode = (event.keyCode ? event.keyCode : event.which);
       if (keycode === 13) {
-        e.preventDefault();
-        searchReq();
+        performSearch(e, template);
       }
     },
     'click #submit' : function(e, template) {
-      e.preventDefault();
-      searchReq();
-      setTimeout(function(){Meteor.Router.to('/recipes')}, 5000);
+      performSearch(e, template);
     }
   });
+
+  var performSearch = function(e, template){
+    e.preventDefault();
+    searchReq();
+    // Show a loading menu and hide it just before the redirect
+    $('#loadingModal').modal('show');
+    setTimeout(function(){
+      $('#loadingModal').modal('hide');
+    }, 4500);
+    // Redirect to search results
+    setTimeout(function(){
+      Meteor.Router.to('/recipes');
+    }, 5000);
+  };
 
   var searchReq = function(){
     var query = {
@@ -60,15 +71,15 @@ if (Meteor.isClient) {
   Template.recipe.name = function(){
     for (var i = 0; i < resultRecipes.length; i++)
     console.log(resultRecipes[i].name);
-  }
+  };
 
   Template.recipe.ingredients = function(){
     for (var i = 0; i < resultRecipes.length; i++)
     return resultRecipes[i].ingredients;
-  }
+  };
 
   Template.recipe.directions = function(){
     for (var i = 0; i < resultRecipes.length; i++)
     return resultRecipes[i].directions;
-  }
+  };
 }
