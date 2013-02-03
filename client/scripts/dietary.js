@@ -8,3 +8,10 @@ lactoseDiet = ['butter', 'milk', 'cheese', 'milk powder', 'cream', 'margarine', 
 
 
 celiacDiet = ['mayonnaise', 'bagels', 'baguette', 'barley', 'beer', 'bran', 'bread', 'brioche', 'bulgur', 'buns', 'flatbread', 'flour', 'yeast', 'cracker', 'wheat', 'croissants', 'cracker', 'croutons', 'dough', 'macaroni', 'focaccia', 'fettuccine', 'frogs legs', 'grissini', 'holland rusks', 'lamb', 'lard', 'malt', 'wonton skins', 'tartlette shells', 'rolls', 'puff pastry', 'seitan', 'phyllo', 'pastry', 'pasta', 'panko', 'pancake'];
+
+var restrictionHash = {
+  vegetarianDiet : vegetarianDiet,
+  veganDiet : veganDiet,
+  lactoseDiet: lactoseDiet,
+  celiacDiet : celiacDiet
+}
