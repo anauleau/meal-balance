@@ -22,7 +22,14 @@ if (Meteor.isClient) {
 
   var searchReq = function(){
     var query = {
-      keyWord: $('#search').val()
+      keyWord: $('#search').val(),
+      restrictions: {
+        // Give 'em a default value to fall back on in case it's undefined
+        lactoseDiet    : $('#lactoseDiet').is(':checked')    || false,
+        vegetarianDiet : $('#vegetarianDiet').is(':checked') || false,
+        veganDiet      : $('#veganDiet').is(':checked')      || false,
+        celiacDiet     : $('#celiacDiet').is(':checked')     || false
+      }
     };
     getDataByCuisine(query);
   };
