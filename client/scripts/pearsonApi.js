@@ -11,7 +11,7 @@ var getDataByCuisine = function(filter){
       getResultRecipes(data.results, filterArray);
     }
   });
-}
+};
 
 var resultRecipes = [];
 var getResultRecipes = function(resultArray, dietArray){
