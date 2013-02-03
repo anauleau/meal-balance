@@ -4,6 +4,10 @@ html, body {
 }
 #wrap {
   min-height: 100%;
+  background-image: url("/retropattern.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 #main {
@@ -23,6 +27,8 @@ html, body {
 
 .container {
   width: 800px;
+  height: 800px;
+  background-color: #F2CC33;
   margin: 0 auto;
 }
 
