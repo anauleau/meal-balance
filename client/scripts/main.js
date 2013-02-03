@@ -3,6 +3,7 @@ if (Meteor.isClient) {
   Meteor.Router.add({
     '/': 'index',
     '/settings' : 'accountSettings',
+    '/recipes' : 'recipe',
     '*': '404'
   });
 
@@ -17,6 +18,7 @@ if (Meteor.isClient) {
     'click #submit' : function(e, template) {
       e.preventDefault();
       searchReq();
+      setTimeout(function(){Meteor.Router.to('/recipes')}, 5000);
     }
   });
 
@@ -32,19 +34,6 @@ if (Meteor.isClient) {
       }
     };
     getDataByCuisine(query);
-  };
-
-  Template.basicForm.cuisine = function(){
-    return ["African",
-            "American",
-            "American: Cajun and Creole",
-            "American: California",
-            "American: Hawaii",
-            "American: Mid-Atlantic",
-            "American: Midwest",
-            "American: Mountain States",
-            "American: New England",
-            "American: Pacific Northwest"];
   };
 
   Template.accountSettings.events({
@@ -63,4 +52,23 @@ if (Meteor.isClient) {
             'Halaal',
             'Lactose Intolerant'];
   };
+
+  // Template.showableRecipe.showRecipe = function(){
+  //   return true;
+  // };
+
+  Template.recipe.name = function(){
+    for (var i = 0; i < resultRecipes.length; i++)
+    console.log(resultRecipes[i].name);
+  }
+
+  Template.recipe.ingredients = function(){
+    for (var i = 0; i < resultRecipes.length; i++)
+    return resultRecipes[i].ingredients;
+  }
+
+  Template.recipe.directions = function(){
+    for (var i = 0; i < resultRecipes.length; i++)
+    return resultRecipes[i].directions;
+  }
 }
