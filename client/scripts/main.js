@@ -70,7 +70,7 @@ if (Meteor.isClient) {
 
   Template.recipe.name = function(){
     for (var i = 0; i < resultRecipes.length; i++)
-    console.log(resultRecipes[i].name);
+    return (resultRecipes[i].name);
   };
 
   Template.recipe.ingredients = function(){
