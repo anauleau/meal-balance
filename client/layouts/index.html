@@ -16,13 +16,11 @@
 <template name="recipe">
 	<div class="recipe">
 		<div class="instructions">
-			Recipe for: {{name}} <br>
-			Ingredients: {{#each ingredients}}
-				{{.}} <br>
-			{{/ each}} <br> 
-			Directions: {{#each directions}}
-				{{.}}<br>
-			{{/ each}}
+		    Recipe for: {{getDate.name}} <br>
+		    Ingredients: 
+		    {{#each getDate.ingredients}}
+			    {{.}} <br> 
+			  {{/ each}}
 		</div>
 	</div>
 </template>

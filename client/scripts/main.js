@@ -57,18 +57,8 @@ if (Meteor.isClient) {
   //   return true;
   // };
 
-  Template.recipe.name = function(){
-    for (var i = 0; i < resultRecipes.length; i++)
-    console.log(resultRecipes[i].name);
-  }
 
-  Template.recipe.ingredients = function(){
-    for (var i = 0; i < resultRecipes.length; i++)
-    return resultRecipes[i].ingredients;
-  }
-
-  Template.recipe.directions = function(){
-    for (var i = 0; i < resultRecipes.length; i++)
-    return resultRecipes[i].directions;
+  Template.recipe.getData = function(){
+    return resultRecipes[0];
   }
 }
