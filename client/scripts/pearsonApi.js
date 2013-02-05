@@ -24,6 +24,7 @@ var getResultRecipes = function(resultArray, dietArray){
         dataType: "jsonp",
         url: eachResult.url,
         success: function(data){
+          eachResult["recipeName"] = eachResult.name
           eachResult["directions"] = data.directions;
         }
       });

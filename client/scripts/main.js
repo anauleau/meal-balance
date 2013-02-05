@@ -64,22 +64,15 @@ if (Meteor.isClient) {
             'Lactose Intolerant'];
   };
 
-  // Template.showableRecipe.showRecipe = function(){
-  //   return true;
-  // };
-
-  Template.recipe.name = function(){
-    for (var i = 0; i < resultRecipes.length; i++)
-    return (resultRecipes[i].name);
+  Template.recipe.recipeName = function(){
+    return resultRecipes[0]["recipeName"];
   };
 
   Template.recipe.ingredients = function(){
-    for (var i = 0; i < resultRecipes.length; i++)
-    return resultRecipes[i].ingredients;
+    return resultRecipes[0]["ingredients"];
   };
 
   Template.recipe.directions = function(){
-    for (var i = 0; i < resultRecipes.length; i++)
-    return resultRecipes[i].directions;
+    return resultRecipes[0]["directions"];
   };
 }

@@ -6,7 +6,6 @@ veganDiet = ['eggs', 'chicken', 'andouille', 'antelope', 'bacon', 'beef', 'bolog
 
 lactoseDiet = ['butter', 'milk', 'cheese', 'milk powder', 'cream', 'margarine', 'butter', 'buttermilk', 'butternut', 'yougurt', 'cheese', 'cream', 'dulce de leche', 'genoise', 'ghee', 'grits', 'margarine', 'whipped topping', 'rennet'];
 
-
 celiacDiet = ['mayonnaise', 'bagels', 'baguette', 'barley', 'beer', 'bran', 'bread', 'brioche', 'bulgur', 'buns', 'flatbread', 'flour', 'yeast', 'cracker', 'wheat', 'croissants', 'cracker', 'croutons', 'dough', 'macaroni', 'focaccia', 'fettuccine', 'frogs legs', 'grissini', 'holland rusks', 'lamb', 'lard', 'malt', 'wonton skins', 'tartlette shells', 'rolls', 'puff pastry', 'seitan', 'phyllo', 'pastry', 'pasta', 'panko', 'pancake'];
 
 var restrictionHash = {
