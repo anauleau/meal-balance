@@ -1,4 +1,6 @@
 var searchTerms;
+var i = 0;
+
 if (Meteor.isClient) {
   Meteor.Router.add({
     '/': 'index',
@@ -26,16 +28,15 @@ if (Meteor.isClient) {
     $('#loadingModal').modal('show');
     setTimeout(function(){
       $('#loadingModal').modal('hide');
-    }, 4500);
+    }, 3000);
     // Redirect to search results
     setTimeout(function(){
       Meteor.Router.to('/recipes');
-    }, 5000);
+    }, 3000);
   };
 
   var searchReq = function(){
     var query = {
-      keyWord: $('#search').val(),
       restrictions: {
         // Give 'em a default value to fall back on in case it's undefined
         lactoseDiet    : $('#lactoseDiet').is(':checked')    || false,
@@ -44,7 +45,7 @@ if (Meteor.isClient) {
         celiacDiet     : $('#celiacDiet').is(':checked')     || false
       }
     };
-    getDataByCuisine(query);
+    getResultRecipes(query);
   };
 
   Template.accountSettings.events({
@@ -64,22 +65,17 @@ if (Meteor.isClient) {
             'Lactose Intolerant'];
   };
 
-  // Template.showableRecipe.showRecipe = function(){
-  //   return true;
-  // };
 
-  Template.recipe.name = function(){
-    for (var i = 0; i < resultRecipes.length; i++)
-    console.log(resultRecipes[i].name);
+  Template.recipe.recipeName = function(){
+    i = Math.floor(Math.random()*(resultRecipes.length));
+    return resultRecipes[i]["name"];
   };
 
   Template.recipe.ingredients = function(){
-    for (var i = 0; i < resultRecipes.length; i++)
-    return resultRecipes[i].ingredients;
+    return resultRecipes[i]["ingredients"];
   };
 
   Template.recipe.directions = function(){
-    for (var i = 0; i < resultRecipes.length; i++)
-    return resultRecipes[i].directions;
+    return resultRecipes[i]["directions"];
   };
 }

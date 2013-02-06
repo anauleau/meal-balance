@@ -8,20 +8,17 @@
 	{{> loadingModal}}
 </template>
 
-<!-- <template name="showableRecipe">
-	{{#if showRecipe}}
-		{{> recipe}}
-	{{/if}}
-</template> -->
-
 <template name="recipe">
 	<div class="recipe">
 		<div class="instructions">
-			Recipe for: {{name}} <br />
-			Ingredients: {{#each ingredients}}
+			Recipe for: 
+			{{recipeName}} <br /><br />
+			Ingredients: <br />
+			{{#each ingredients}}
 				{{.}} <br />
 			{{/ each}} <br />
-			Directions: {{#each directions}}
+			Directions:<br />
+			{{#each directions}}
 				{{.}}<br />
 			{{/ each}}
 		</div>
