@@ -1,6 +1,5 @@
 Recipes = new Meteor.Collection('recipes')
 if (Meteor.isServer) {
-  console.log("yo")
   Meteor.startup(function(){
     if(Recipes.find().count() === 0){
       Meteor.http.call("get",

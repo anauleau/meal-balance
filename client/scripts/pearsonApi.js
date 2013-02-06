@@ -1,35 +1,16 @@
-var getDataByCuisine = function(filter){
-  var cuisineAPI = "https://api.pearson.com/kitchen-manager/v1/recipes.json?ingredients-any="+filter.keyWord+"&apikey=3e8c8773334c91e0614872759ec4f303";
-  $.ajax({
-    type: "GET",
-    dataType: "jsonp",
-    url: cuisineAPI,
-    success: function(data){
-      var ingredientFilter = _.map(filter.restrictions, function(b, eachDiet){
-        return b ? restrictionHash[eachDiet] : [];
-      });
-      ingredientFilter = _.uniq(_.flatten(ingredientFilter));
-      getResultRecipes(data.results, ingredientFilter);
-    }
-  });
-};
-
+Recipes = new Meteor.Collection('recipes');
 var resultRecipes = [];
-var getResultRecipes = function(resultArray, dietArray){
-  _.each(resultArray, function(eachResult){
-    if(_.intersection(eachResult.ingredients, dietArray).length === 0){
-      resultRecipes.push(eachResult);
-      $.ajax({
-        type: "GET",
-        dataType: "jsonp",
-        url: eachResult.url,
-        success: function(data){
-          eachResult["recipeName"] = eachResult.name
-          eachResult["directions"] = data.directions;
-        }
-      });
+var getResultRecipes = function(query){
+  var ingredientFilter = _.map(query.restrictions, function(truthiness, restriction){
+    return truthiness ? restrictionHash[restriction] : [];
+  });
+  ingredientFilter = _.uniq(_.flatten(ingredientFilter));
+  var recipes = Recipes.find({}).fetch();
+  recipes.forEach(function(result){
+    if(_.intersection(result.ingredients, ingredientFilter).length === 0){
+      resultRecipes.push(result);
     }
   });
-  console.log(resultRecipes);
+  return resultRecipes;
   Meteor.call('showResults');
 };
