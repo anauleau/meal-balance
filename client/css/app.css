@@ -22,7 +22,8 @@ html, body {
 
 .container {
   width: 800px;
-  height: 800px;
+  min-height: 650px;
+  height: 100%;
   background-color: white;
   border-radius: 10px;
   margin: 0 auto;
